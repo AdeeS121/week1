@@ -1,16 +1,23 @@
+const name = "Bill"
+const month = 4;
+const date = 18;
+const year = 2021
 
-const fullName = 'Mike Jones'
-const birthMonth = 2;
-const birthDay = 12;
-const birthYear = '1945'
+let today = new Date();
+let isBirthDay = new Date(year, month -1, date) 
+const getUserBirthDay = function() {
 
-
-const getUserBirthDay = function(birthMonth, birthDay, birthYear){
-    if(birthMonth === 2 && birthDay === 4 && birthYear === '1990'){
-        return 'Happy Birthday!'
-}   else {
-    return `Hi ${fullName}. Your birthday is ${birthMonth}-${birthDay}-${birthYear}.`
+if (mane = 'Bill' && (today.getMonth() + 1) == isBirthDay.getMonth() + 1 && today.getDate() == isBirthDay.getDate()) {
+ console.log('Happy Birthday!')
+} else {
+    console.log(`Hi ${name}. Your birthday is ${isBirthDay}`)
 }
-}
-console.log(getUserBirthDay(birthMonth, birthDay, birthYear))
+};
+
+console.log(getUserBirthDay())
+    
+
+
+
+
 
