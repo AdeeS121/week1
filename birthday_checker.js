@@ -8,9 +8,11 @@ rl.question('What is your name: ', function(name) {
     rl.question('What is your birth month: ', function(birthMonth) {
       rl.question('What is your birth day: ', function(birthDay) { 
         rl.question('What is your birth year: ', function(birthYear){
-          let today = new Date()
-           if (today.getMonth() == birthMonth) {
-             console.log('It is working') 
+          let today = new Date();
+          let currentMonth = today.getMonth() + 1;
+          let currentDay = today.getDate();
+           if (currentMonth == birthMonth && currentDay == birthDay) {
+             console.log('Happy Birthday!') 
            } else {
              console.log(`Hi ${name}. Your birthday is ${birthMonth}-${birthDay}-${birthYear}`)
            }
