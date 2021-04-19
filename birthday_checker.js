@@ -17,25 +17,26 @@
 // console.log(getUserBirthDay())
     
 
-let name = "Bill"
-let month = 4;
-let day = 18;
-let year = 1962;
+let name = 'Mike Jones';
+let month = 2;
+let day = 12;
+let year = 1945;
 
+let currentMonth = (new Date().getMonth() + 1);
+let currentDay = new Date().getDate();
+let bDay = new Date(year, month, day);
 
 const getUserBirthDay = function() {
-let today = new Date();
-let bDay = new Date(year, month -1, day);
-    month = bDay.getMonth() + 1;
-    day = bDay.getDate()
-    year = bDay.getFullYear()
 
- console.log('Happy Birthday!');
+  birthMonth = bDay.getMonth();
+  birthDay = bDay.getDate();
+  birthYear = bDay.getFullYear()
+
+if (name == ' ' && currentMonth == birthMonth && currentDay == birthDay) {
+     return 'Happy Birthday!';
 } else {
-    console.log(`Hi ${name}. Your birthday is ${month}-${day}-${year}.`);
+    return `Hi ${name}. Your birthday is ${birthMonth}-${birthDay}-${birthYear}.`;
 }
-
-
 };
 console.log(getUserBirthDay())
 
