@@ -1,3 +1,33 @@
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('What is your name: ', function(name) {
+    rl.question('What is your birth month: ', function(birthMonth) {
+      rl.question('What is your birth day: ', function(birthDay) { 
+        rl.question('What is your birth year: ', function(birthYear){
+          let today = new Date()
+           if (today.getMonth() == birthMonth) {
+             console.log('It is working') 
+           } else {
+             console.log(`Hi ${name}. Your birthday is ${birthMonth}-${birthDay}-${birthYear}`)
+           }
+            rl.close();
+        }); 
+      })
+    });
+});
+
+rl.on("close", function() {
+    console.log("\nBYE BYE !!!");
+    process.exit(0);
+});
+
+
+
+
 // const name = "Bill"
 // const month = 3;
 // const date = 18;
@@ -17,27 +47,27 @@
 // console.log(getUserBirthDay())
     
 
-let name = 'Mike Jones';
-let month = 2;
-let day = 12;
-let year = 1945;
+// let name = 'Mike Jones';
+// let month = 2;
+// let day = 12;
+// let year = 1945;
 
-let currentMonth = (new Date().getMonth() + 1);
-let currentDay = new Date().getDate();
-let bDay = new Date(year, month, day);
+// let currentMonth = (new Date().getMonth() + 1);
+// let currentDay = new Date().getDate();
+// let bDay = new Date(year, month, day);
 
-const getUserBirthDay = function() {
+// const getUserBirthDay = function() {
 
-  birthMonth = bDay.getMonth();
-  birthDay = bDay.getDate();
-  birthYear = bDay.getFullYear()
+//   birthMonth = bDay.getMonth();
+//   birthDay = bDay.getDate();
+//   birthYear = bDay.getFullYear()
 
-if (name == ' ' && currentMonth == birthMonth && currentDay == birthDay) {
-     return 'Happy Birthday!';
-} else {
-    return `Hi ${name}. Your birthday is ${birthMonth}-${birthDay}-${birthYear}.`;
-}
-};
-console.log(getUserBirthDay())
+// if (name == ' ' && currentMonth == birthMonth && currentDay == birthDay) {
+//      return 'Happy Birthday!';
+// } else {
+//     return `Hi ${name}. Your birthday is ${birthMonth}-${birthDay}-${birthYear}.`;
+// }
+// };
+// console.log(getUserBirthDay())
 
     
